@@ -4,8 +4,8 @@
 namespace wechat;
 
 class Http{
-	  protected $token;
-	   protected $cache;
+	protected $token;
+	protected $cache;
 	public function __construct(AccessToken $token = null)
     {
         $this->token = $token;
@@ -13,5 +13,8 @@ class Http{
     public function setToken(AccessToken $token)
     {
         $this->token = $token;
+    }
+    public function request($url, $method = self::GET, $params = array(), $options = array(), $retry = 1)
+    {
     }
 }
